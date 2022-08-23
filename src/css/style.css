@@ -521,7 +521,9 @@ nav {
     font-size: 20px;
 }
 
-
+.map{
+    width:100%;
+}
 
 .footer {
     width: 100%;
