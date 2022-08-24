@@ -8,14 +8,19 @@
     <meta name="robots" content="all">
     <meta property="og:title" content="Это моя первая страница...">
     <title>Евгений Галаганов - Веб-разработчик</title>
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/preloader.css">
+       <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+   <div class="loader">
+  <div class="loader_inner"></div>
+</div>
     <header>
         <nav>
-            <div class="logo">Евгений Галаганов</div>
+ <div class="logo"><a href="index.html" class="log">Евгений Галаганов</a></div>
             <div class="menu">
                 <ul>
                     <li><a href="#">Обо мне</a></li>
@@ -28,13 +33,12 @@
             </div>
         </nav>
     </header>
-
     <div class="main">
         <div class="title_container">
             <h1>Привет <br> Я Евгений Галаганов</h1>
             <h4>Фулл стек веб-разработчик</h4>
-            <input type="submit" value="Обо мне">
-            <input type="submit" value="Мои работы">
+            <input type="button" value="Обо мне">
+            <input type="button" value="Мои работы">
         </div>
     </div>
 
@@ -90,7 +94,7 @@
                 </div>
                 <div class="cases_web">
                     <h3>WEBSITE</h3>
-                    <p>http://www.somedomain.com</p>
+                   <p>http://www.somedomain.com</p>
                 </div>
 
                 <div class="cases_name">
@@ -98,7 +102,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit., sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
                 <div class="cases_button">
-                    <input type="submit" value="VISIT LIVE SITE">
+                   <a href="#">    <input type="button" value="VISIT LIVE SITE"></a>
                 </div>
             </div>
         </div>
@@ -126,14 +130,14 @@
                 <option value="2">Только ПК</option>
                 <option value="3">Только мобильный сайт</option>
                 <option value="4">ПК + Мобильный</option>
-            </select>
+            </select><hr>
             <div class="cost_deadlines">
-                <hr>
                 <h4>Сроки</h4>
-                <p>0</p>
+                <br>
+                <h4>Стоимость</h4>
             </div>
             <div class="cost_cost">
-                <h4>Стоимость</h4>
+                 <p>0</p><br>
                 <p>0</p>
             </div>
         </div>
@@ -205,22 +209,25 @@
             <input type="submit" value="Отправить">
             <div class="block">
                 <div class="contacts_icon">
-                    <img src="img/фб.png" alt="">
+                    <a href="#"><img src="img/фб.png" alt=""></a>
+                </div>
+                <a href="#"> </a>
+                <div class="contacts_icon">
+                    <a href="#"> <img src="img/твитер.png" alt=""></a>
                 </div>
                 <div class="contacts_icon">
-                    <img src="img/твитер.png" alt="">
+                    <a href="#"> <img src="img/мяч.png" alt="">
+                    </a>
                 </div>
                 <div class="contacts_icon">
-                    <img src="img/мяч.png" alt="">
+                    <a href="#"> <img src="img/киса.png" alt="">
+                    </a>
                 </div>
                 <div class="contacts_icon">
-                    <img src="img/киса.png" alt="">
+                    <a href="#"> <img src="img/инст.png" alt=""></a>
                 </div>
                 <div class="contacts_icon">
-                    <img src="img/инст.png" alt="">
-                </div>
-                <div class="contacts_icon">
-                    <img src="img/ин.png" alt="">
+                    <a href="#"> <img src="img/ин.png" alt=""></a>
                 </div>
             </div>
         </div>

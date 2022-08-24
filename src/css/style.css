@@ -5,7 +5,11 @@ body {
 nav {
     width: 100%;
     height: 60px;
-    background: #344051;
+    background: #344051 ;
+    position: fixed;
+     top: 0;
+    left: 0;
+    z-index:99;
 }
 
 .logo {
@@ -14,8 +18,14 @@ nav {
     line-height: 60px;
     padding-left: 320px;
     float: left;
+    -webkit-animation: coming 2s ease;
+    -o-animation: coming 2s ease;
+    animation: coming 2s ease;
 }
 
+.logo .log {
+    color: #ffff;
+}
 .menu {
     float: left;
     padding-left: 270px;
@@ -27,15 +37,51 @@ nav {
     line-height: 60px;
     font-size: 16px;
     text-transform: uppercase;
+    -webkit-animation: menutop 0.3s ease forwards;
+    -o-animation: menutop 0.3s ease forwards;
+    animation: menutop 0.3s ease forwards;
+    opacity: 0;
 }
 
+.menu li:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.menu li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.menu li:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.menu li:nth-child(5) {
+    animation-delay: 1.2s;
+}
+
+.menu li:nth-child(6) {
+    animation-delay: 1.5s;
+}
+
+
 .menu li a {
+    transition: all 0.2s;
     color: #ffff;
+    display: inline-block;
+    transform: scale(1);
+}
+
+.menu li a:hover {
+    color: #d17700;
+}
+
+.menu li a:active {
+    transform: scale(1.1);
 }
 
 .main {
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100%;
     background: url(../img/boy.png) 90% 100%/auto 90% no-repeat, url(../img/фон.jpg) center/cover no-repeat;
     box-shadow: inset 0px -10px 40px rgba(0, 0, 0, 0.6);
 }
@@ -45,6 +91,13 @@ nav {
     margin: 270px 0px 0px 240px;
     color: #2c384a;
     text-align: center;
+    opacity: 0;
+    -webkit-animation: titlemove 1s ease forwards;
+    -o-animation: titlemove 1s ease forwards;
+    animation: titlemove 1s ease forwards;
+    -webkit-animation-delay: 1.8s;
+    -o-animation-delay: 1.8s;
+    animation-delay: 1.8s;
 }
 
 .title_container h1 {
@@ -69,6 +122,20 @@ nav {
     font-size: 12px;
     padding: 0px 14px;
     margin: 40px 12px 0px 18px;
+
+}
+
+.title_container input:hover {
+    background: #344051;
+    transition: all 0.2s;
+    transform: scale(1);
+    color: white;
+}
+
+.title_container input:active {
+    background: #344051;
+    transform: scale(1.1);
+    color: white;
 }
 
 .about_me h2 {
@@ -119,6 +186,18 @@ nav {
     margin: 30px 308px;
 }
 
+.about_me_container input:hover {
+    background: url(../img/иконка1.png) 5% 50%/auto 45% no-repeat, #2c384a;
+    transition: all 0.2s;
+    transform: scale(1);
+    color: white;
+}
+
+.about_me_container input:active {
+    background: url(../img/иконка1.png) 5% 50%/auto 45% no-repeat, #2c384a;
+    transform: scale(1.1);
+    color: white;
+}
 
 .skills {
     width: 100%;
@@ -155,7 +234,6 @@ nav {
     text-align: center;
     margin-top: 110px;
 }
-
 
 .skills h3 {
     margin-top: 30px;
@@ -246,10 +324,26 @@ nav {
     background-color: #63b5ae;
 }
 
+.cases_container input:hover {
+    background: #d17700;
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.cases_container input:active {
+    background: #d17700;
+    transition: all 0.2s;
+    transform: scale(1.1);
+}
+
+
 .cost_container {
     width: 840px;
     text-align: left;
-    margin: 160px auto;
+    margin: 70px auto;
+    height: 100%;
+    border: 2px solid #d3d7dc;
+box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .cost_container h2 {
@@ -260,42 +354,49 @@ nav {
     text-transform: uppercase;
 }
 
-.cost_deadlines hr {
+.cost hr {
     height: 4px;
     border: none;
     background: #eeeeee;
-    width: 840px;
+    width: 770px;
     margin: 25px auto;
 }
 
 .cost Select {
     display: block;
-    width: 840px;
+    width: 770px;
     height: 38px;
     background: #eeeeee;
     margin-top: 11px;
     text-indent: 10px;
+    margin-left: 30px;
 }
 
 .cost h3 {
     font-size: 23px;
     margin-top: 35px;
     text-transform: uppercase;
+    text-indent: 40px;
 }
 
 .cost h4 {
     font-size: 16px;
-    display: inline-block;
-    width: 840px;
-    text-align: left;
 }
 
 .cost p {
     font-size: 20px;
-    text-align: right;
-    width: 840px;
+}
+.cost_deadlines {
+    text-align: left;
+    padding-bottom: 40px;
     display: inline-block;
-    margin-top: -10px;
+    text-indent: 40px;
+    width: 750px;
+}
+.cost_cost {
+    text-align: left;
+    display: inline-block;
+     text-indent: 40px;
 }
 
 
@@ -304,7 +405,8 @@ nav {
     width: 100%;
     height: 55%;
     background: url(../img/фон1.jpg) no-repeat;
-    margin-top: -40px;
+    background-attachment: fixed;
+
 }
 
 .statistics_container h2 {
@@ -468,6 +570,15 @@ nav {
     padding-top: 43px;
 }
 
+.contacts_icon:hover {
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.contacts_icon:active {
+    transform: scale(1.1);
+}
+
 .contacts_container input[type='text'] {
     height: 30px;
     text-align: left;
@@ -509,6 +620,19 @@ nav {
     margin: 15px 12px 0px 18px;
 }
 
+.contacts_container input[type='submit']:hover {
+    background: #344051;
+    transition: all 0.2s;
+    transform: scale(1);
+    color: white;
+}
+
+.contacts_container input[type='submit']:active {
+    background: #344051;
+    transition: all 0.2s;
+    transform: scale(1.1);
+}
+
 .contacts_container p {
     text-align: center;
     padding-top: 25px;
@@ -521,10 +645,6 @@ nav {
     font-size: 20px;
 }
 
-.map{
-    width:100%;
-    padding-top: 5px;
-}
 
 .footer {
     width: 100%;
@@ -537,3 +657,47 @@ nav {
     color: white;
     line-height: 60px;
 }
+
+@keyframes coming {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes menutop {
+    from {
+        opacity: 0;
+        margin-top: -80px;
+    }
+
+    to {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+@keyframes titlemove {
+    from {
+        opacity: 0;
+        margin-left: -300px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 240px;
+    }
+
+  .preloader-7 div {
+    border: 14px inset #FFF;
+    border-radius: 100%;
+    padding: 4px;
+    animation: preloader-7-spin 15s linear infinite;
+}
+@keyframes preloader-7-spin {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+}  
