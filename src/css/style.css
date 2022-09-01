@@ -384,12 +384,12 @@ nav {
     transform: scale(1.1);
 }
 
-.cost_container {
+.cost_border {
     margin: 70px auto;
-    height: 100%;
-    width: 80%;
     border: 2px solid #d3d7dc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .cost_container h2 {
