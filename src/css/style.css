@@ -17,7 +17,9 @@ nav {
     position: fixed;
     z-index: 99;
 }
-
+nav ul {
+    padding-left: 2rem;
+}
 .menu {
     float: left;
 }
@@ -32,9 +34,14 @@ nav {
 
 }
 
+.dropdown {
+    padding-bottom: 10px;
+}
+
 .logo .log {
     color: #ffff;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .menu li {
@@ -43,6 +50,7 @@ nav {
     line-height: 60px;
     font-size: 14px;
     text-transform: uppercase;
+    color: white;
     -webkit-animation: menutop 0.3s ease forwards;
     -o-animation: menutop 0.3s ease forwards;
     animation: menutop 0.3s ease forwards;
@@ -73,9 +81,12 @@ nav {
 .menu li a {
     transition: all 0.2s;
     color: #ffff;
-    display: inline-block;
     transform: scale(1);
     text-decoration: none;
+}
+
+.menu li a.active {
+    color: #d17700;
 }
 
 .menu li a:hover {
@@ -85,6 +96,8 @@ nav {
 .menu li a:active {
     transform: scale(1.1);
 }
+
+
 
 .dropdown buttton:hover {
     background: #344051;
@@ -96,7 +109,6 @@ nav {
     background: #344051;
     transform: scale(1.1);
 }
-
 
 
 
@@ -315,6 +327,8 @@ nav {
     margin-top: 25px;
     width: 100%;
     height: 100%;
+    min-height: 300px;
+    max-height: 650px;
 }
 
 .cases .first_text {
@@ -323,27 +337,31 @@ nav {
 
 .cases h3 {
     font-size: 20px;
+
 }
 
 .cases_block {
-    padding-top: 30px;
+    margin-top: 30px;
 }
 
 .cases p {
-
     font-size: 16px;
 
 }
+.cases_text{
+  margin-bottom: 20px; 
 
+}
 .cases_client {
     margin-top: 10px;
+
 }
 
 
 .cases_name {
-    margin-top: -140px;
+    margin-top: -90px;
     line-height: 1.20;
-    text-align: justify;
+
 }
 
 @media(max-width: 992px) {
@@ -359,33 +377,37 @@ nav {
         font-size: 16px;
     }
 }
-
-.cases_container input {
-    height: 40px;
+.cases_bt{
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+.cases_container .button {
+    height: 100%;
     text-align: center;
     border: 2px #63b5ae;
     border-radius: 5px;
     color: #6d7682;
     font-size: 18px;
-    padding: 0px 25px;
+    padding: 5px 25px;
     color: #ffff;
     background-color: #63b5ae;
+    text-decoration: none;
 }
 
-.cases_container input:hover {
+.cases_container .button:hover {
     background: #344051;
     transition: all 0.2s;
     transform: scale(1);
 }
 
-.cases_container input:active {
+.cases_container .button:active {
     background: #344051;
     transition: all 0.2s;
     transform: scale(1.1);
 }
 
 .cost_border {
-    margin: 70px auto;
+    margin: 40px auto;
     border: 2px solid #d3d7dc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding-left: 40px;
@@ -395,7 +417,7 @@ nav {
 .cost_container h2 {
     text-align: center;
     font-size: 30px;
-    margin: 40px auto 20px;
+    margin: 20px auto 20px;
     padding-top: 40px;
     text-transform: uppercase;
 }
@@ -490,15 +512,17 @@ nav {
     margin-bottom: 100px;
 }
 
-.statistics_item img {
-    height: 40px;
-}
-
-.statistics_container h3 {
+.statistics_container .statistics_number {
+    opacity: 0;
     font-weight: 900;
     font-size: 26px;
     color: black;
 }
+
+.statistics_item img {
+    height: 40px;
+}
+
 
 .statistics_container p {
     font-size: 14px;
@@ -507,7 +531,7 @@ nav {
 }
 
 .reviews {
-    margin-top: 60px;
+    padding-top: 30px;
 }
 
 .reviews_container h2 {
@@ -526,59 +550,6 @@ nav {
     margin: 0 auto 25px;
 }
 
-.reviews_container {
-    text-align: center;
-    font-size: 12px;
-    margin: 10px auto;
-    width: 100%;
-
-}
-
-.reviews img {
-    padding-top: 20px;
-    display: block;
-    margin: 0 auto;
-
-}
-
-.reviews p {
-    padding-top: 25px;
-    font-size: 14px;
-}
-
-.reviews_button {
-    padding-top: 25px;
-}
-
-.reviews input[type='radio']:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
-    background-color: #d1d3d1;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
-    margin-bottom: 60px;
-}
-
-.reviews input[type='radio']:checked:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
-    background-color: #ffa500;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
-    margin-bottom: 60px;
-}
 
 .contacts {
     margin-top: 80px;
@@ -605,7 +576,6 @@ nav {
     margin: 0 auto 25px;
 }
 
-.contacts_container {}
 
 .contacts_item {
     padding-top: 40px;
@@ -625,14 +595,17 @@ nav {
 .contacts_icon img {
     height: 16px;
 }
+.contacts_item img:hover {
+    transform: scale(1.1);
+}
 
 .contacts_icon:hover {
     transition: all 0.2s;
-    transform: scale(1);
+    transform: scale(1.2);
 }
 
 .contacts_icon:active {
-    transform: scale(1.1);
+    transform: scale(1.4);
 }
 
 .contacts_container input[type='text'] {
@@ -713,7 +686,7 @@ nav {
 .copy_text {
     font-size: 12px;
     line-height: 60px;
-     color: white;
+    color: white;
 }
 
 @keyframes coming {
@@ -750,19 +723,62 @@ nav {
     }
 }
 
-.preloader-7 div {
-    border: 14px inset #FFF;
-    border-radius: 100%;
-    padding: 4px;
-    animation: preloader-7-spin 15s linear infinite;
+
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: #355c7d;
+    background: -webkit-linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);
+    background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);
+    z-index: 1001;
+    color: #eee;
 }
 
-@keyframes preloader-7-spin {
-    from {
-        transform: rotate(0deg)
-    }
+.loader__image {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: loader-rotate 2s infinite linear;
+}
 
-    to {
-        transform: rotate(360deg)
+@keyframes loader-rotate {
+    100% {
+        transform: rotate(360deg);
     }
+}
+
+.loaded_hiding .loader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+.loaded .loader {
+    display: none;
+}
+
+.element-animation {
+    opacity: 0;
+}
+
+.element-animation.element-show {
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+img {
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+img[data-src] {
+    opacity: 0;
 }

@@ -1,0 +1,229 @@
+.my_modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.my_modal:target {
+    display: block;
+    overflow-y: auto;
+}
+
+.my_modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+
+@media (min-width:576px) {
+    .my_modal-dialog {
+        max-width: 460px;
+        margin: 30px auto;
+    }
+}
+
+.my_modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    outline: 0;
+}
+
+@media (min-width:768px) {
+    .my_modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    }
+}
+
+.my_modal-header {
+    display: block;
+    padding: 14px 14px 4px;
+}
+
+.my_modal-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.close {
+    padding: 1px 5px 0;
+    border: 1px solid #000;
+    border-radius: 50%;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+    top: 4px;
+    right: 4px;
+    position: absolute;
+}
+
+.close:focus,
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+
+.my_modal-body {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+}
+
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    overflow: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.7s ease-in 0s;
+}
+
+.popup {
+    top: 10%;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    margin: auto;
+    width: 80%;
+    min-width: 200px;
+    max-width: 600px;
+    position: absolute;
+    padding: 15px 20px;
+    border: 1px solid #666;
+    background-color: #fefefe;
+    z-index: 1000;
+    border-radius: 10px;
+    font: 14px/18px 'Tahoma', Arial, sans-serif;
+    box-shadow: 0 0px 14px rgba(0, 0, 0, 0.4);
+}
+
+.close {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0, 130, 230, 0.9);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    outline: none;
+}
+
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+
+.close:hover {
+    background-color: rgba(180, 20, 14, 0.8);
+}
+
+.button-po {
+    text-align: center;
+}
+
+.popup input[type='submit'] {
+    height: 30px;
+    border: 2px solid #ffff;
+    background: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    padding: 0px 14px;
+    background: #344051;
+}
+.popup .zag {
+    text-align: center;
+    font-size:24px;
+    font-weight: 900;
+}
+.popup {
+    text-align: center;
+    font-size:20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.popup .form{
+    text-align: center;
+    font-size:16px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.popup input[type='submit']:hover {
+    transition: all 0.2s;
+    transform: scale(1);
+    background-color: rgba(180, 20, 14, 0.8);
+}
+
+.popup input[type='submit']:active {
+    transition: all 0.2s;
+    transform: scale(1.1);
+}
+.popup input[type='submit']{
+background-color: rgba(0, 130, 230, 0.9);
+}
+
+.popup input[type='text'] {
+    height: 30px;
+    width: 100%;
+    background: none;
+    border-radius: 1px;
+    color: black;
+    font-size: 12px;
+    padding: 0px 10px;
+    margin: 20px 0px 20px 0px;
+    background: #eeeeee;
+  border: 2px solid silver;
+}
+.popup .forms{
+margin:auto;
+}
